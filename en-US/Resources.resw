@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add.Label" xml:space="preserve">
+    <value>Add phone</value>
+  </data>
+  <data name="AddButton.Label" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddCaption.Text" xml:space="preserve">
+    <value>Add phone</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>Phone balance</value>
+  </data>
+  <data name="BiteLoginFailure" xml:space="preserve">
+    <value>Password verification failed. Verify provided data before continue.</value>
+  </data>
+  <data name="BitePassword" xml:space="preserve">
+    <value>Password from SMS</value>
+  </data>
+  <data name="Cancel.Label" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Caption.Header" xml:space="preserve">
+    <value>Display caption</value>
+  </data>
+  <data name="Carrier.Header" xml:space="preserve">
+    <value>Carrier</value>
+  </data>
+  <data name="DataBalanceLimit" xml:space="preserve">
+    <value>for Internet</value>
+  </data>
+  <data name="DataUnitsB" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="DataUnitsGB" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="DataUnitsKB" xml:space="preserve">
+    <value>KB</value>
+  </data>
+  <data name="DataUnitsMB" xml:space="preserve">
+    <value>MB</value>
+  </data>
+  <data name="DetailsExpires" xml:space="preserve">
+    <value>Until {0:H:mm \o\f MMMM d}</value>
+  </data>
+  <data name="Disclaimer.Text" xml:space="preserve">
+    <value>Number and password will be stored in device and sent to carrier each time to clarify balance</value>
+  </data>
+  <data name="Done.Label" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="Edit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EditCaption.Text" xml:space="preserve">
+    <value>Edit phone</value>
+  </data>
+  <data name="Interval.Header" xml:space="preserve">
+    <value>Balance clarification interval</value>
+  </data>
+  <data name="Interval1Day" xml:space="preserve">
+    <value>Once a day</value>
+  </data>
+  <data name="Interval1Hour" xml:space="preserve">
+    <value>Once in hour</value>
+  </data>
+  <data name="Interval30Minutes" xml:space="preserve">
+    <value>Once in half an hour</value>
+  </data>
+  <data name="Interval4Hours" xml:space="preserve">
+    <value>Once in 4 hours</value>
+  </data>
+  <data name="LoggingIn" xml:space="preserve">
+    <value>Logging in…</value>
+  </data>
+  <data name="NetworkOffline" xml:space="preserve">
+    <value>Connect to Internet  to clarify balance</value>
+  </data>
+  <data name="Number.Header" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="Pin.Text" xml:space="preserve">
+    <value>Pin to start</value>
+  </data>
+  <data name="Refresh.Label" xml:space="preserve">
+    <value>Clarify</value>
+  </data>
+  <data name="Refreshed.Text" xml:space="preserve">
+    <value>Clarified</value>
+  </data>
+  <data name="RefreshedDay" xml:space="preserve">
+    <value>{0} day ago</value>
+  </data>
+  <data name="RefreshedDays" xml:space="preserve">
+    <value>{0} days ago</value>
+  </data>
+  <data name="RefreshedHour" xml:space="preserve">
+    <value>{0} hour ago</value>
+  </data>
+  <data name="RefreshedHours" xml:space="preserve">
+    <value>{0} hours ago</value>
+  </data>
+  <data name="RefreshedLongAgo" xml:space="preserve">
+    <value>long ago</value>
+  </data>
+  <data name="RefreshedMinute" xml:space="preserve">
+    <value>{0} minute ago</value>
+  </data>
+  <data name="RefreshedMinutes" xml:space="preserve">
+    <value>{0} minutes ago</value>
+  </data>
+  <data name="RefreshedNot" xml:space="preserve">
+    <value>not yet</value>
+  </data>
+  <data name="RefreshedNow" xml:space="preserve">
+    <value>just now</value>
+  </data>
+  <data name="RefreshedSecond" xml:space="preserve">
+    <value>{0} second ago</value>
+  </data>
+  <data name="RefreshedSeconds" xml:space="preserve">
+    <value>{0} seconds ago</value>
+  </data>
+  <data name="RefreshedYesterday" xml:space="preserve">
+    <value>yesterday</value>
+  </data>
+  <data name="Refreshing" xml:space="preserve">
+    <value>Clarifying balance…</value>
+  </data>
+  <data name="Remove.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Reorder.Label" xml:space="preserve">
+    <value>Change order</value>
+  </data>
+  <data name="RequestingPassword" xml:space="preserve">
+    <value>Requesting password…</value>
+  </data>
+  <data name="RequestPassword.Content" xml:space="preserve">
+    <value>Request password via SMS</value>
+  </data>
+  <data name="RequestPasswordFailure" xml:space="preserve">
+    <value>Password request failed. Verify phone number and try again.</value>
+  </data>
+  <data name="Save.Label" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SmsBalance" xml:space="preserve">
+    <value>for messaging</value>
+  </data>
+  <data name="SmsUnits" xml:space="preserve">
+    <value>SMS</value>
+  </data>
+  <data name="VoiceBalance" xml:space="preserve">
+    <value>for talk</value>
+  </data>
+  <data name="ZZLoginFailure" xml:space="preserve">
+    <value>Login to Mana ZZ failed. Verify phone number and password before continue.</value>
+  </data>
+  <data name="ZZPassword" xml:space="preserve">
+    <value>Password from Mana ZZ</value>
+  </data>
+  <data name="DataBalanceSpent" xml:space="preserve">
+    <value>in Internet</value>
+  </data>
+</root>

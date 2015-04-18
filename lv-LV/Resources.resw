@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add.Label" xml:space="preserve">
+    <value>Pievienot tālruni</value>
+  </data>
+  <data name="AddButton.Label" xml:space="preserve">
+    <value>Pievienot</value>
+  </data>
+  <data name="AddCaption.Text" xml:space="preserve">
+    <value>Tālruņa pievienošana</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>Tālruņa atlikums</value>
+  </data>
+  <data name="BiteLoginFailure" xml:space="preserve">
+    <value>Paroles pārbaude neizdevās. Pārskatiet ievadītots datus pirms mēģināt atkal.</value>
+  </data>
+  <data name="BitePassword" xml:space="preserve">
+    <value>Īsziņā saņemtā parole</value>
+  </data>
+  <data name="Cancel.Label" xml:space="preserve">
+    <value>Atcelt</value>
+  </data>
+  <data name="Caption.Header" xml:space="preserve">
+    <value>Attēlojamais nosaukums</value>
+  </data>
+  <data name="Carrier.Header" xml:space="preserve">
+    <value>Operators</value>
+  </data>
+  <data name="DataBalanceLimit" xml:space="preserve">
+    <value>Internetam</value>
+  </data>
+  <data name="DataUnitsB" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="DataUnitsGB" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="DataUnitsKB" xml:space="preserve">
+    <value>KB</value>
+  </data>
+  <data name="DataUnitsMB" xml:space="preserve">
+    <value>MB</value>
+  </data>
+  <data name="DetailsExpires" xml:space="preserve">
+    <value>Līdz {0:d. MMMM H:mm}</value>
+  </data>
+  <data name="Disclaimer.Text" xml:space="preserve">
+    <value>Programma neglabā tālruņa numuru un paroli. Tie tiek nosūtīti operatoram tikai pievienojot tālruni. Vēlākā paroles maiņa neietekmē atlikuma noskaidrošanu.</value>
+  </data>
+  <data name="Done.Label" xml:space="preserve">
+    <value>Pabeigt</value>
+  </data>
+  <data name="Edit.Text" xml:space="preserve">
+    <value>Mainīt</value>
+  </data>
+  <data name="EditCaption.Text" xml:space="preserve">
+    <value>Tālruņa maiņa</value>
+  </data>
+  <data name="Interval.Header" xml:space="preserve">
+    <value>Atlikuma noskaidrošanas biežums</value>
+  </data>
+  <data name="Interval1Day" xml:space="preserve">
+    <value>Reizi dienā</value>
+  </data>
+  <data name="Interval1Hour" xml:space="preserve">
+    <value>Reizi stundā</value>
+  </data>
+  <data name="Interval30Minutes" xml:space="preserve">
+    <value>Reizi pusstundā</value>
+  </data>
+  <data name="Interval4Hours" xml:space="preserve">
+    <value>Reizi 4 stundās</value>
+  </data>
+  <data name="LoggingIn" xml:space="preserve">
+    <value>Piesakās…</value>
+  </data>
+  <data name="NetworkOffline" xml:space="preserve">
+    <value>Pieslēdzieties Internetam, lai noskaidrotu atlikumu</value>
+  </data>
+  <data name="Number.Header" xml:space="preserve">
+    <value>Numurs</value>
+  </data>
+  <data name="Pin.Text" xml:space="preserve">
+    <value>Piespraust sākumekrānā</value>
+  </data>
+  <data name="Refresh.Label" xml:space="preserve">
+    <value>Noskaidrot</value>
+  </data>
+  <data name="Refreshed.Text" xml:space="preserve">
+    <value>Noskaidrots</value>
+  </data>
+  <data name="RefreshedDay" xml:space="preserve">
+    <value>pirms {0} dienas</value>
+  </data>
+  <data name="RefreshedDays" xml:space="preserve">
+    <value>pirms {0} dienām</value>
+  </data>
+  <data name="RefreshedHour" xml:space="preserve">
+    <value>pirms {0} stundas</value>
+  </data>
+  <data name="RefreshedHours" xml:space="preserve">
+    <value>pirms {0} stundām</value>
+  </data>
+  <data name="RefreshedLongAgo" xml:space="preserve">
+    <value>ļoti sen</value>
+  </data>
+  <data name="RefreshedMinute" xml:space="preserve">
+    <value>pirms {0} minūtes</value>
+  </data>
+  <data name="RefreshedMinutes" xml:space="preserve">
+    <value>pirms {0} minūtēm</value>
+  </data>
+  <data name="RefreshedNot" xml:space="preserve">
+    <value>vēl nav</value>
+  </data>
+  <data name="RefreshedNow" xml:space="preserve">
+    <value>tikko</value>
+  </data>
+  <data name="RefreshedSecond" xml:space="preserve">
+    <value>pirms {0} sekundes</value>
+  </data>
+  <data name="RefreshedSeconds" xml:space="preserve">
+    <value>pirms {0} sekundēm</value>
+  </data>
+  <data name="RefreshedYesterday" xml:space="preserve">
+    <value>vakar</value>
+  </data>
+  <data name="Refreshing" xml:space="preserve">
+    <value>Noskaidro atlikumu…</value>
+  </data>
+  <data name="Remove.Text" xml:space="preserve">
+    <value>Dzēst</value>
+  </data>
+  <data name="Reorder.Label" xml:space="preserve">
+    <value>Pārkārtot</value>
+  </data>
+  <data name="RequestingPassword" xml:space="preserve">
+    <value>Pieprasa paroli…</value>
+  </data>
+  <data name="RequestPassword.Content" xml:space="preserve">
+    <value>Saņemt paroli īsziņā</value>
+  </data>
+  <data name="RequestPasswordFailure" xml:space="preserve">
+    <value>Paroles pieprasījums neizdevās. Pārbaudiet numuru un mēģiniet atkal.</value>
+  </data>
+  <data name="Save.Label" xml:space="preserve">
+    <value>Saglabāt</value>
+  </data>
+  <data name="SmsBalance" xml:space="preserve">
+    <value>sarakstei</value>
+  </data>
+  <data name="SmsUnits" xml:space="preserve">
+    <value>SMS</value>
+  </data>
+  <data name="VoiceBalance" xml:space="preserve">
+    <value>sarunām</value>
+  </data>
+  <data name="ZZLoginFailure" xml:space="preserve">
+    <value>Pieteikšanās Manā ZZ neizdevās. Pārbaudiet numuru un paroli pirms mēģināt atkal.</value>
+  </data>
+  <data name="ZZPassword" xml:space="preserve">
+    <value>Parole no Mana ZZ</value>
+  </data>
+  <data name="DataBalanceSpent" xml:space="preserve">
+    <value>Internetā</value>
+  </data>
+</root>
