@@ -82,6 +82,7 @@
     <Compile Include="Account.cs" />
     <Compile Include="Balances.cs" />
     <Compile Include="BiteAccount.cs" />
+    <Compile Include="OAccount.cs" />
     <Compile Include="ProperHttpClient.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />

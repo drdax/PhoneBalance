@@ -7,17 +7,18 @@
 			<ComboBox x:Name="carrierBox" Header="Operators" SelectionChanged="Carrier_SelectionChanged" x:Uid="Carrier">
 				<ComboBoxItem Content="Zelta Zivtiņa"/>
 				<ComboBoxItem Content="Bite"/>
+				<ComboBoxItem Content="OKarte"/>
 			</ComboBox>
 			<TextBox x:Name="numberBox" Header="Numurs" InputScope="TelephoneNumber" MaxLength="8" x:Uid="Number"/>
 			<Button x:Name="requestPasswordBtn" Content="Saņemt paroli īsziņā" Click="RequestPassword_Click" x:Uid="RequestPassword"/>
 			<PasswordBox x:Name="passwordBox" Header="Parole no Mana ZZ" IsPasswordRevealButtonEnabled="True"/>
-			<TextBlock TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" x:Uid="Disclaimer"
-				Text="Programma neglabā tālruņa numuru un paroli. Tie tiek nosūtīti operatoram tikai pievienojot tālruni. Vēlākā paroles maiņa neietekmē atlikuma noskaidrošanu."/>
+			<TextBlock TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" x:Name="disclaimer" Text="Programma neglabā tālruņa numuru un paroli" x:Uid="Disclaimer"/>
+			<TextBlock TextWrapping="Wrap" FontSize="{StaticResource TextStyleLargeFontSize}" x:Name="oDisclaimer" x:Uid="ODisclaimer"/>
 		</StackPanel>
 	</ScrollViewer>
 	<Page.BottomAppBar>
 		<CommandBar>
-			<AppBarButton x:Name="saveBtn" Icon="Accept" Label="Saglabāt" Click="Save_Click" x:Uid="AddButton"/>
+			<AppBarButton Icon="Accept" Label="Saglabāt" Click="Save_Click" x:Uid="AddButton"/>
 		</CommandBar>
 	</Page.BottomAppBar>
 </Page>

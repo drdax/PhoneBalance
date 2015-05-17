@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Linq;
 using System.Text.RegularExpressions;
-using DrDax.PhoneBalance.Data;
 using Windows.UI.Popups;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using DrDax.PhoneBalance.Data;
 
 namespace DrDax.PhoneBalance {
 	public sealed partial class AddAccountPage : Page {
 		public AddAccountPage() {
-			this.InitializeComponent();
+			InitializeComponent();
 			app=(App)App.Current;
 			carrierBox.SelectedIndex=0;
 		}
@@ -33,29 +33,34 @@ namespace DrDax.PhoneBalance {
 				await new MessageDialog(DisplayResources.Strings.GetString("NetworkOffline")).ShowAsync();
 				return;
 			}
-			string number=numberBox.Text;
-			Account account=null;
+
 			SetEnabled(false);
 			var statusBar=StatusBar.GetForCurrentView();
 			statusBar.ProgressIndicator.Text=DisplayResources.Strings.GetString("LoggingIn");
 			await statusBar.ProgressIndicator.ShowAsync();
-			string errorMessage=null;
-			if (carrierBox.SelectedIndex == 0) {
-				try {
-					account=await ZZAccount.Login(client, numberBox.Text, passwordBox.Password);
-					if (account == null)
-						errorMessage=DisplayResources.Strings.GetString("ZZLoginFailure");
-				} catch (Exception ex) {
-					errorMessage=ex.Message+Environment.NewLine+DisplayResources.Strings.GetString("ZZLoginFailure");
+
+			string number=numberBox.Text;
+			Account account=null;
+			string errorMessage=null, errorMessageId=null;
+			try {
+				switch (carrierBox.SelectedIndex) {
+					case 0:
+						errorMessageId="ZZLoginFailure";
+						account=await ZZAccount.Login(client, numberBox.Text, passwordBox.Password);
+						break;
+					case 1:
+						errorMessageId="BiteLoginFailure";
+						account=await BiteAccount.Login(client, numberBox.Text, passwordBox.Password.ToUpper());
+						break;
+					case 2:
+						errorMessageId="OLoginFailure";
+						account=await OAccount.Login(client, numberBox.Text, passwordBox.Password);
+						break;
 				}
-			} else {
-				try {
-					account=await BiteAccount.Login(client, numberBox.Text, passwordBox.Password.ToUpper());
-					if (account == null)
-						errorMessage=DisplayResources.Strings.GetString("BiteLoginFailure");
-				} catch (Exception ex) {
-					errorMessage=ex.Message+Environment.NewLine+DisplayResources.Strings.GetString("BiteLoginFailure");
-				}
+				if (account == null)
+					errorMessage=DisplayResources.Strings.GetString(errorMessageId);
+			} catch (Exception ex) {
+				errorMessage=ex.Message+Environment.NewLine+DisplayResources.Strings.GetString(errorMessageId);
 			}
 
 			await statusBar.ProgressIndicator.HideAsync();
@@ -86,10 +91,26 @@ namespace DrDax.PhoneBalance {
 			Frame.Navigate(typeof(EditAccountPage));
 		}
 		private void Carrier_SelectionChanged(object sender, SelectionChangedEventArgs e) {
-			bool isZZ=carrierBox.SelectedIndex == 0;
-			passwordBox.Header=DisplayResources.Strings.GetString(isZZ ? "ZZPassword":"BitePassword");
-			requestPasswordBtn.Visibility=isZZ ? Visibility.Collapsed:Visibility.Visible;
-			passwordBox.MaxLength=isZZ ? 255:BitePasswordLength;
+			Carrier carrier;
+			switch (carrierBox.SelectedIndex) {
+				case 0:
+					carrier=Carrier.ZZ;
+					passwordBox.Header=DisplayResources.Strings.GetString("ZZPassword");
+					break;
+				case 1:
+					carrier=Carrier.Bite;
+					passwordBox.Header=DisplayResources.Strings.GetString("BitePassword");
+					break;
+				default://case 2:
+					carrier=Carrier.OKarte;
+					passwordBox.Header=DisplayResources.Strings.GetString("OPassword");
+					break;
+			}
+			requestPasswordBtn.Visibility=carrier == Carrier.Bite ? Visibility.Visible:Visibility.Collapsed;
+			passwordBox.MaxLength=carrier == Carrier.Bite ? BitePasswordLength:255;
+			disclaimer.Visibility=carrier == Carrier.OKarte ? Visibility.Collapsed:Visibility.Visible;
+			oDisclaimer.Visibility=carrier == Carrier.OKarte ? Visibility.Visible:Visibility.Collapsed;
+
 		}
 		private async void RequestPassword_Click(object sender, RoutedEventArgs e) {
 			SetEnabled(false);
@@ -118,7 +139,7 @@ namespace DrDax.PhoneBalance {
 
 		private readonly App app;
 		private readonly ProperHttpClient client=new ProperHttpClient();
-		private readonly Regex numberRx=new Regex("^2[0-9]{7}$");
+		private readonly Regex numberRx=new Regex("^2[0-9]{7}$"); // LMT tīklā var būt numuri ar 6 priekšā, bet tas neattiecas uz OKarti.
 		private const int BitePasswordLength=6;
 	}
 }

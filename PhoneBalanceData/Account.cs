@@ -119,6 +119,6 @@ namespace DrDax.PhoneBalance.Data {
 		}
 	}
 	public enum Carrier : byte {
-		ZZ, Bite
+		ZZ, Bite, OKarte
 	}
 }

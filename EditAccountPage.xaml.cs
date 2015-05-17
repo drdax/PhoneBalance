@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
-using DrDax.PhoneBalance.Data;
 using Windows.UI.StartScreen;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using DrDax.PhoneBalance.Data;
 
 namespace DrDax.PhoneBalance {
 	public sealed partial class EditAccountPage : Page {
@@ -21,6 +21,7 @@ namespace DrDax.PhoneBalance {
 			account=app.Account;
 			captionBox.Text=account.Caption;
 			intervalBox.SelectedValue=account.RefreshInterval;
+			// TODO: pielikt aptuveno viena pieprasījuma pārsūtāmo datu apojumu atkarībā no operatora
 		}
 
 		protected override void OnNavigatedFrom(NavigationEventArgs e) {

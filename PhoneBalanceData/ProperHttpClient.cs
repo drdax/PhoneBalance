@@ -11,7 +11,8 @@ namespace DrDax.PhoneBalance.Data {
 	public class ProperHttpClient {
 		public readonly JsonSerializer Serializer=new JsonSerializer();
 		// Windows.Web nevis System.Net, jo ir nepieciešams atļaut neuzticamus SSL sertifikātus.
-		private readonly HttpClient client;
+		public readonly HttpClient Client;
+		public readonly HttpCookieManager CookieManager;
 
 		public ProperHttpClient() {
 			var filter=new HttpBaseProtocolFilter();
@@ -22,17 +23,19 @@ namespace DrDax.PhoneBalance.Data {
 			filter.IgnorableServerCertificateErrors.Add(ChainValidationResult.InvalidName);
 			// Gadījumā, ja kādreiz serveris sadomās prasīt paroli, neļauj to attēlot grafiskā saskarnē.
 			filter.AllowUI=false;
-			client=new HttpClient(filter);
-			client.DefaultRequestHeaders.Add("User-Agent", "Dalvik/1.6.0 (Linux; U; Android 4.0.3; GT-I9100 Build/IML74K)");
+			// Manuāli apstrādā Mans LMT pāradresāciju, lai mazinātu trafiku.
+			filter.AllowAutoRedirect=false;
+			Client=new HttpClient(filter);
+			CookieManager=filter.CookieManager;
 		}
 
 		public async Task<TResponse> PostAsync<TResponse>(string url, HttpFormUrlEncodedContent content) {
 			Debug.WriteLine("HTTP post "+url);
-			return await GetResponse<TResponse>(await client.PostAsync(new Uri(url), content));
+			return await GetResponse<TResponse>(await Client.PostAsync(new Uri(url), content));
 		}
 		public async Task<TResponse> SendAsync<TResponse>(HttpRequestMessage request) {
 			Debug.WriteLine("HTTP {0} {1}", request.Method, request.RequestUri);
-			return await GetResponse<TResponse>(await client.SendRequestAsync(request));
+			return await GetResponse<TResponse>(await Client.SendRequestAsync(request));
 		}
 
 		private async Task<TResponse> GetResponse<TResponse>(HttpResponseMessage response) {

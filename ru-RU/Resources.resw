@@ -271,7 +271,7 @@
     <value>для разговоров</value>
   </data>
   <data name="ZZLoginFailure" xml:space="preserve">
-    <value>Представление в Manā ZZ не удалось. Проверте номер и пароль перед следующей попыткой.</value>
+    <value>Представление в Mana ZZ не удалось. Проверте номер и пароль перед следующей попыткой.</value>
   </data>
   <data name="ZZPassword" xml:space="preserve">
     <value>Пароль от Mana ZZ</value>
@@ -290,5 +290,14 @@
   </data>
   <data name="Refreshed2Seconds" xml:space="preserve">
     <value>{0} секунды назад</value>
+  </data>
+  <data name="ODisclaimer.Text" xml:space="preserve">
+    <value>Программа хранит номер телефона LMT и пароль. Их передают оператору каждый раз при определении остатка. Последующяя смена пароля может помешать действию программы.</value>
+  </data>
+  <data name="OLoginFailure" xml:space="preserve">
+    <value>Представление в Mans LMT не удалось. Проверте номер и пароль перед следующей попыткой. Возможно до этого придётся посетит Mans LMT.</value>
+  </data>
+  <data name="OPassword" xml:space="preserve">
+    <value>Пароль от Mans LMT</value>
   </data>
 </root>

@@ -8,9 +8,11 @@ namespace DrDax.PhoneBalance.Tasks {
 			// Patur procesu, kamēr darbina asinhronu kodu.
 			BackgroundTaskDeferral deferral=taskInstance.GetDeferral();
 
-			// Uzdevumam nepieciešamo interneta savienojumu pieprasa reģistrācijas brīdī, tāpēc šeit papildus nepārbauda.
 			var client=new ProperHttpClient();
 			foreach (Account account in Settings.GetAccounts()) {
+				// Neskatoties uz SystemConditionType.InternetAvailable, kuru pieprasīja reģistrācijas brīdī, var gadīties, ka uzdevumu palaiž bez interneta savienojuma.
+				// Tāpēc to šeit pārbauda. Un dara pirms katra izsaukuma, jo tie var būt tik ilgi, ka pa starpai atslēdz savienojumu.
+				if (Network.Disconnected) break;
 #if !DEBUG
 				if (account.RefreshDate == null || account.RefreshDate+account.RefreshInterval < DateTime.Now)
 				try {

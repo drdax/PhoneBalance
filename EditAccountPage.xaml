@@ -8,8 +8,8 @@
 	</StackPanel>
 	<Page.BottomAppBar>
 		<CommandBar>
-			<AppBarButton x:Name="saveBtn" Icon="Save" Label="Saglabāt" Click="Save_Click" x:Uid="Save"/>
-			<AppBarButton x:Name="cancelBtn" Icon="Cancel" Label="Atcelt" Click="Cancel_Click" x:Uid="Cancel"/>
+			<AppBarButton Icon="Save" Label="Saglabāt" Click="Save_Click" x:Uid="Save"/>
+			<AppBarButton Icon="Cancel" Label="Atcelt" Click="Cancel_Click" x:Uid="Cancel"/>
 		</CommandBar>
 	</Page.BottomAppBar>
 </Page>

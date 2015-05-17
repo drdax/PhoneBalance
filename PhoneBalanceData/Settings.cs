@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Windows.Foundation.Collections;
 using Windows.Storage;
 
 namespace DrDax.PhoneBalance.Data {
@@ -42,6 +41,9 @@ namespace DrDax.PhoneBalance.Data {
 					break;
 				case Carrier.Bite:
 					account=new BiteAccount(id);
+					break;
+				case Carrier.OKarte:
+					account=new OAccount(id);
 					break;
 				default: return null;
 			}

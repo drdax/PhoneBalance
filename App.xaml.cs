@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
-using DrDax.PhoneBalance.Data;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Phone.UI.Input;
@@ -9,7 +8,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
-using System.Linq;
+using DrDax.PhoneBalance.Data;
 
 namespace DrDax.PhoneBalance {
 	/// <summary>
@@ -27,8 +26,8 @@ namespace DrDax.PhoneBalance {
 		/// executed, and as such is the logical equivalent of main() or WinMain().
 		/// </summary>
 		public App() {
-			this.InitializeComponent();
-			this.Suspending += this.OnSuspending;
+			InitializeComponent();
+			Suspending += OnSuspending;
 			HardwareButtons.BackPressed += HardwareButtons_BackPressed;
 		}
 

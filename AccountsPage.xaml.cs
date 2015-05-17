@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Net.NetworkInformation;
-using DrDax.PhoneBalance.Data;
 using Windows.ApplicationModel.Background;
+using Windows.UI.Core;
 using Windows.UI.Input;
 using Windows.UI.Popups;
 using Windows.UI.StartScreen;
@@ -16,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using DrDax.PhoneBalance.Data;
 
 namespace DrDax.PhoneBalance {
 	public sealed partial class AccountsPage : Page {
@@ -87,11 +85,11 @@ namespace DrDax.PhoneBalance {
 			await statusBar.ProgressIndicator.ShowAsync();
 
 			for (int n=0; n < app.Accounts.Count; n++)
-				list.ContainerFromIndex(n).SetValue(ListViewItem.IsEnabledProperty, false);
+				list.ContainerFromIndex(n).SetValue(IsEnabledProperty, false);
 			var client=new ProperHttpClient();
 			for (int n=0; n < app.Accounts.Count; n++) {
 				await app.Accounts[n].SetBalance(client);
-				list.ContainerFromIndex(n).SetValue(ListViewItem.IsEnabledProperty, true);
+				list.ContainerFromIndex(n).SetValue(IsEnabledProperty, true);
 			}
 			BottomAppBar.IsEnabled=true;
 			await statusBar.ProgressIndicator.HideAsync();
@@ -182,7 +180,7 @@ namespace DrDax.PhoneBalance {
 		}
 
 		private void task_Completed(BackgroundTaskRegistration sender, BackgroundTaskCompletedEventArgs args) {
-			this.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () => {
+			this.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => {
 				foreach (Account account in app.Accounts)
 					Settings.LoadBalances(account);
 			});
